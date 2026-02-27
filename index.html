@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>EduNotes Pro</title>
+    <!-- Global design system, Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+    <!-- sticky navbar -->
+    <header class="navbar">
+        <div class="container flex space-between align-center">
+            <div class="logo">EduNotes Pro</div>
+            <nav class="nav-links">
+                <a href="login.html">Login</a>
+                <a href="register.html">Register</a>
+                <button id="dark-toggle" class="icon-btn">🌙</button>
+            </nav>
+            <button class="hamburger" aria-label="toggle menu">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </header>
+
+    <!-- hero section -->
+    <section class="hero">
+        <div class="container text-center">
+            <h1>All Study Materials in One Place</h1>
+            <p class="subtitle">Notes, PYQs, Roadmaps &amp; Important Questions</p>
+            <div class="hero-ctas">
+                <a href="#features" class="btn primary">Explore Now</a>
+                <a href="upload.html" class="btn secondary">Upload Notes</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- features section -->
+    <section id="features" class="features container">
+        <h2 class="section-title">What You Get</h2>
+        <div class="cards grid-3">
+            <div class="card feature-card">
+                <div class="icon">📚</div>
+                <h3>Notes</h3>
+                <p>Well organized class notes for every subject.</p>
+            </div>
+            <div class="card feature-card">
+                <div class="icon">📄</div>
+                <h3>PYQs</h3>
+                <p>Previous year questions with solutions.</p>
+            </div>
+            <div class="card feature-card">
+                <div class="icon">🛣</div>
+                <h3>Roadmaps</h3>
+                <p>Step by step study plans to reach goals.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- class selection -->
+    <section class="classes container">
+        <h2 class="section-title">Select Your Class</h2>
+        <div class="cards grid-4">
+            <a class="card class-card" href="10th.html">
+                <div class="icon">🔟</div>
+                <h3>10th</h3>
+            </a>
+            <a class="card class-card" href="11th.html">
+                <div class="icon">1️⃣1️⃣</div>
+                <h3>11th</h3>
+            </a>
+            <a class="card class-card" href="12th.html">
+                <div class="icon">1️⃣2️⃣</div>
+                <h3>12th</h3>
+            </a>
+            <a class="card class-card" href="btech.html">
+                <div class="icon">🎓</div>
+                <h3>B.Tech</h3>
+            </a>
+        </div>
+    </section>
+
+    <!-- footer -->
+    <footer class="footer">
+        <div class="container grid-3">
+            <div class="footer-col">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="#features">Features</a></li>
+                    <li><a href="#">Upload</a></li>
+                    <li><a href="#">Dashboard</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>About</h4>
+                <p>EduNotes Pro is a student-driven notes sharing platform for high school and university learners.</p>
+            </div>
+            <div class="footer-col">
+                <h4>Contact</h4>
+                <p>Email: support@edunotespro.com</p>
+                <div class="social-icons">
+                    <a href="#">🐦</a>
+                    <a href="#">📘</a>
+                    <a href="#">📸</a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom text-center">
+            &copy; 2026 EduNotes Pro. All rights reserved.
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>

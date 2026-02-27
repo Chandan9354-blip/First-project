@@ -1,0 +1,147 @@
+/* Global Design System */
+:root {
+    --font-family: 'Poppins', sans-serif;
+    --primary-color: #2563eb;
+    --bg-color: #f8fafc;
+    --card-bg: #ffffff;
+    --radius: 12px;
+    --shadow: 0 4px 12px rgba(0,0,0,0.05);
+    --transition: 0.3s ease;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: var(--font-family);
+    background: var(--bg-color);
+    color: #111;
+    line-height: 1.6;
+}
+
+.container {
+    width: min(90%, 1200px);
+    margin: 0 auto;
+}
+
+/* Utility classes */
+.flex { display: flex; }
+.space-between { justify-content: space-between; }
+.align-center { align-items: center; }
+.text-center { text-align: center; }
+.grid-3 { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px,1fr)); gap:1.5rem; }
+.grid-4 { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px,1fr)); gap:1.5rem; }
+.btn {
+    padding: 0.75rem 1.5rem;
+    border: none;
+    border-radius: var(--radius);
+    cursor: pointer;
+    transition: background var(--transition), transform var(--transition);
+    font-weight: 500;
+    text-decoration: none;
+    display: inline-block;
+}
+.btn.primary {
+    background: var(--primary-color);
+    color: #fff;
+}
+.btn.secondary {
+    background: linear-gradient(90deg, var(--primary-color), #3b82f6);
+    color: #fff;
+}
+.btn:hover { transform: translateY(-2px); }
+.icon-btn {
+    background: transparent;
+    border: none;
+    font-size: 1.25rem;
+    cursor: pointer;
+}
+.card {
+    background: var(--card-bg);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    padding: 1.5rem;
+    transition: transform var(--transition), box-shadow var(--transition);
+}
+.card:hover { transform: translateY(-4px); box-shadow: 0 6px 18px rgba(0,0,0,0.1); }
+
+/* Navbar */
+.navbar {
+    position: sticky;
+    top: 0;
+    background: var(--card-bg);
+    box-shadow: var(--shadow);
+    z-index: 1000;
+}
+.navbar .logo { font-size: 1.5rem; font-weight: 600; }
+.nav-links a { margin-left: 1.25rem; text-decoration: none; color: inherit; }
+.hamburger {
+    display: none;
+    flex-direction: column;
+    gap: 4px;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+.hamburger span {
+    width: 24px;
+    height: 2px;
+    background: #333;
+    border-radius: 2px;
+}
+
+/* Hero */
+.hero {
+    padding: 6rem 0;
+    background: var(--bg-color);
+}
+.hero h1 { font-size: 2.5rem; margin-bottom: 1rem; }
+.hero .subtitle { font-size: 1.25rem; margin-bottom: 2rem; color: #555; }
+.hero-ctas a { margin: 0 0.5rem; }
+
+/* Sections */
+.section-title { font-size: 1.75rem; margin-bottom: 2rem; color: var(--primary-color); }
+.features .icon,
+.class-card .icon { font-size: 2rem; margin-bottom: 0.5rem; }
+.feature-card h3,
+.class-card h3 { margin: 0.5rem 0; }
+
+/* Class cards */
+.class-card { text-align: center; text-decoration: none; color: inherit; padding:2rem; }
+.class-card:hover { transform: scale(1.04) translateY(-4px); }
+
+/* Footer */
+.footer { background: var(--card-bg); padding: 3rem 0 1rem; }
+.footer-col h4 { margin-bottom: 1rem; }
+.footer-col ul { list-style: none; padding: 0; }
+.footer-col ul li { margin-bottom: 0.5rem; }
+.footer-col a { text-decoration: none; color: inherit; }
+.footer-bottom { padding: 1rem 0; font-size: 0.9rem; color: #777; }
+.social-icons a { margin-right: 0.5rem; font-size: 1.25rem; }
+
+/* Responsive & mobile-first */
+@media (max-width: 768px) {
+    .hamburger { display: flex; }
+    .nav-links { display: none; flex-direction: column; background: var(--card-bg); position: absolute; top: 100%; right: 1rem; box-shadow: var(--shadow); padding: 1rem; border-radius: var(--radius); }
+    .nav-links.open { display: flex; }
+    .hero h1 { font-size: 2rem; }
+    .hero .subtitle { font-size: 1rem; }
+}
+
+/* Dark mode support */
+body.dark {
+    background: #1f2937;
+    color: #e5e7eb;
+}
+body.dark .navbar,
+body.dark .footer,
+body.dark .card {
+    background: #374151;
+}
+body.dark .btn.primary { background: #3b82f6; }
+body.dark .btn.secondary { background: linear-gradient(90deg, #3b82f6, #60a5fa); }
+body.dark .nav-links { background: #374151; }
